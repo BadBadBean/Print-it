@@ -1,3 +1,5 @@
+// All slides
+
 const slides = [
 	{
 		"image":"slide1.jpg",
@@ -17,13 +19,31 @@ const slides = [
 	}
 ]
 
+
+// Arrows
 const prevButton = document.querySelector(".arrow_left");
 const nextButton = document.querySelector(".arrow_right");
 
 prevButton.addEventListener("click", () => {
-	console.log("Vous avez cliqué sur le bouton gauche")
+	console.log("clic sur le bouton gauche")
 });
 
 nextButton.addEventListener("click", () => {
-	console.log("Vous avez cliqué sur le bouton droit")
+	console.log("clic sur le bouton droit")
 });
+
+// Bullet points
+// 1. Sélectionner l'élément conteneur des bullets
+const dots = document.querySelector(".dots");
+
+// 2. Définir le nombre de slides
+const numberOfSlides = 4;
+
+// 3. Créer les bullets points
+for (let i = 0; i < numberOfSlides; i++) {
+  // Créer un élément bullet (span ou button)
+  const dot = document.createElement("button");
+  
+  // Ajouter une classe pour styliser chaque bullet
+  dot.setAttribute("class", "dot");
+}
