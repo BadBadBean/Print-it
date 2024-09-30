@@ -2,19 +2,19 @@
 
 const slides = [
 	{
-		"image":"./images/slideshow/slide1.jpg",
+		"image":"slide1.jpg",
 		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
 	},
 	{
-		"image":"./images/slideshow/slide2.jpg",
+		"image":"slide2.jpg",
 		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
 	},
 	{
-		"image":"./images/slideshow/slide3.jpg",
+		"image":"slide3.jpg",
 		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	},
 	{
-		"image":"./images/slideshow/slide4.png",
+		"image":"slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
@@ -33,6 +33,7 @@ nextButton.addEventListener("click", () => {
 });
 
 // Bullet points
+
 // 1. Sélectionner l'élément conteneur des bullets
 const dots = document.querySelector(".dots");
 
@@ -47,8 +48,16 @@ for (let i = 0; i < numberOfSlides; i++) {
  // Ajouter une classe pour styliser chaque bullet
  dot.classList.add('dot');
  // Ajoute les dots au conteneur
- dots.append(dot);
-   
+ dots.appendChild(dot);
+
+// 4. Le premier dot est actif par défaut
+  if (i === 0) {
+    dot.classList.add('dot_selected');
+  }
 }
 
- 
+let currentSlide = 0;
+
+function moveSlide(index) {
+	const slideImage = document.querySelector(".banner-img");
+}
