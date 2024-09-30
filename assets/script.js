@@ -2,19 +2,19 @@
 
 const slides = [
 	{
-		"image":"slide1.jpg",
+		"image":"./images/slideshow/slide1.jpg",
 		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
 	},
 	{
-		"image":"slide2.jpg",
+		"image":"./images/slideshow/slide2.jpg",
 		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
 	},
 	{
-		"image":"slide3.jpg",
+		"image":"./images/slideshow/slide3.jpg",
 		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
 	},
 	{
-		"image":"slide4.png",
+		"image":"./images/slideshow/slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
@@ -37,13 +37,18 @@ nextButton.addEventListener("click", () => {
 const dots = document.querySelector(".dots");
 
 // 2. Définir le nombre de slides
-const numberOfSlides = 4;
+const numberOfSlides = slides.length;
+
 
 // 3. Créer les bullets points
 for (let i = 0; i < numberOfSlides; i++) {
   // Créer un élément bullet (span ou button)
-  const dot = document.createElement("button");
-  
-  // Ajouter une classe pour styliser chaque bullet
-  dot.setAttribute("class", "dot");
+ let dot = document.createElement("div");
+ // Ajouter une classe pour styliser chaque bullet
+ dot.classList.add('dot');
+ // Ajoute les dots au conteneur
+ dots.append(dot);
+   
 }
+
+ 
