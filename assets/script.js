@@ -38,6 +38,7 @@ const slides = [
 	  }
 	}
   };
+  createDots();
   
   // Update the slide
   const changeSlide = () => {
@@ -58,7 +59,3 @@ const slides = [
   // Event listeners
   prevButton.addEventListener("click", () => changeIndex(-1));
   nextButton.addEventListener("click", () => changeIndex(1));
-  
-  // Initialize
-  createDots();
-  changeSlide();
